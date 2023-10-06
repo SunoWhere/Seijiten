@@ -1,7 +1,12 @@
 from typing import Annotated
-
 from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer
+
+from db.database import engine
+import models.models as models
+
+models.Base.metadata.drop_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 

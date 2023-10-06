@@ -138,6 +138,18 @@ python-versions = ">=3.7"
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pymysql"
+version = "1.1.0"
+description = "Pure Python MySQL Driver"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+ed25519 = ["PyNaCl (>=1.4.0)"]
+rsa = ["cryptography"]
+
+[[package]]
 name = "python-dotenv"
 version = "1.0.0"
 description = "Read key-value pairs from a .env file and set them as environment variables"
@@ -280,7 +292,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "9910e96ff193967cb0b4b508fc98ebb2de2811caec1619de1bae2ca2127aefcf"
+content-hash = "c8efb417f86318b4a72e649bb7557af4400f74de442346ff2752dad1ef849d5f"
 
 [metadata.files]
 annotated-types = [
@@ -527,6 +539,10 @@ pydantic-core = [
     {file = "pydantic_core-2.10.1-pp39-pypy39_pp73-musllinux_1_1_x86_64.whl", hash = "sha256:f64f82cc3443149292b32387086d02a6c7fb39b8781563e0ca7b8d7d9cf72bd7"},
     {file = "pydantic_core-2.10.1-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:b4a6db486ac8e99ae696e09efc8b2b9fea67b63c8f88ba7a1a16c24a057a0776"},
     {file = "pydantic_core-2.10.1.tar.gz", hash = "sha256:0f8682dbdd2f67f8e1edddcbffcc29f60a6182b4901c367fc8c1c40d30bb0a82"},
+]
+pymysql = [
+    {file = "PyMySQL-1.1.0-py3-none-any.whl", hash = "sha256:8969ec6d763c856f7073c4c64662882675702efcb114b4bcbb955aea3a069fa7"},
+    {file = "PyMySQL-1.1.0.tar.gz", hash = "sha256:4f13a7df8bf36a51e81dd9f3605fede45a4878fe02f9236349fd82a3f0612f96"},
 ]
 python-dotenv = [
     {file = "python-dotenv-1.0.0.tar.gz", hash = "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba"},
