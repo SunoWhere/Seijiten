@@ -1,7 +1,7 @@
 from db.database import Base, engine
 
 import models.users as users
-import models.seiyuus as seiyuus
+import models.people as people
 import models.characters as characters
 import models.companies as companies
 import models.franchises as franchises

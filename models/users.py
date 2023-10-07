@@ -15,6 +15,7 @@ class User(Base):
     is_activated = Column(Boolean, default=False)
     created_at = Column(DateTime)
 
-    seiyuu_data_requests = relationship("SeiyuuData", back_populates="user")
+    person_data_requests = relationship("PersonData", back_populates="user")
     character_data_requests = relationship("CharacterData", back_populates="user")
     work_data_requests = relationship("WorkData", back_populates="user")
+    franchise_data_requests = relationship("FranchiseData", back_populates="user")

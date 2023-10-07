@@ -1,4 +1,4 @@
-from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime
+from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, DateTime, Text
 from sqlalchemy.orm import relationship
 
 from db.database import Base
@@ -17,6 +17,7 @@ class CharacterData(Base):
 
     id = Column(Integer, primary_key = True)
     full_name = Column(String(512), index=True)
+    desciption = Column(Text)
     picture = Column(String(100), default="default.png")
     revision = Column(Integer)
     is_valid = Column(Boolean, default=False)
