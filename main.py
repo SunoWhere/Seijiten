@@ -2,11 +2,10 @@ from typing import Annotated
 from fastapi import Depends, FastAPI
 from fastapi.security import OAuth2PasswordBearer
 
-from db.database import engine
-import models.models as models
+from models.models import init_tables
 
-models.Base.metadata.drop_all(bind=engine)
-models.Base.metadata.create_all(bind=engine)
+
+init_tables()
 
 app = FastAPI()
 
